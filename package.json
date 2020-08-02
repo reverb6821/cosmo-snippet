@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ReverbOD/nodejs-mvc-skeleton-for-sql.git"
+    "url": "git+https://https://github.com/ReverbOD/mvc-nodejs-sql-skeleton.git"
   },
   "keywords": [
     "nodejs",
