@@ -1,5 +1,5 @@
 # MVC skeleton
-**A ready-to-use skeleton for a nodejs/express app with a sql dbéé
+**A ready-to-use skeleton for a nodejs/express app with a sql db**
 
 ## Authors                                                  
 **Giuseppe Gigliotti** - [ReverbOD](https://gigliottigiuseppe.it)
