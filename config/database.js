@@ -1,4 +1,4 @@
-// create connection to database
+ // create connection to database
 
 module.exports = {
     connection: {
