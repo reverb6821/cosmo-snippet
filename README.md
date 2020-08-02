@@ -33,11 +33,11 @@ Clone this repo `git clone https://github.com/ReverbOD/mvc-nodejs-sql-skeleton.g
 # How to use webpack
 In `src/media` are stored all the CSS/JS/Sass file that you need to compile (if you need more JS/Sass/CSS remember to add it on `src/js/index.js` typing `import '../yourFolder/fileYouNeed;` and then run webpack with `npm run build` to compile all your file.
 Here I've used:
--babel-loader, a JS transpiller needed to transform our modern JavaScript code to browser-compatible JavaScript code before bundling it;
--sass-loader, to loads a Sass/SCSS file and compiles it to CSS;
--postcss-loader, a tool for transforming styles with JS plugins.I've lefted the config file empty, so you can add the plugin you need;
--mini-css-extract-plugin, a plugin i need to extract all the transformed CSS from Sass into a separate "bundle";
--file-loader, for manage the imgs and font in the CSS/Sass, resolves import/require() on a file into a url and emits the file into the output directory;
+* babel-loader, a JS transpiller needed to transform our modern JavaScript code to browser-compatible JavaScript code before bundling it:
+* sass-loader, to loads a Sass/SCSS file and compiles it to CSS;
+* postcss-loader, a tool for transforming styles with JS plugins.I've lefted the config file empty, so you can add the plugin you need;
+* mini-css-extract-plugin, a plugin i need to extract all the transformed CSS from Sass into a separate "bundle";
+* file-loader, for manage the imgs and font in the CSS/Sass, resolves import/require() on a file into a url and emits the file into the output directory;
 
 ## Production Mode on Webpack
 Type `npm run build-production` for production mode
