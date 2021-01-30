@@ -26,13 +26,16 @@ The *Model-View-Controller* (MVC) is an architectural pattern that separates an 
 * [ESlint:](https://eslint.org/) - to check error & enforce lint.
 * [Prettier:](https://prettier.io/) - A code formatter.
 * [AirBnB:](https://airbnb.io/javascript/) - A JavaScript style guide.
-  
+
+
+
 ### Webpack
 In `src/views/assests` are stored all the scss & js files that you need to compile.
 *Commands Guide:
 * `build` - this will launch automatic build with webpack
 * `start` - launch the dedicated dev server on port 3000
-* `style` - prettier will format all your code (On .prettierrc.json you will find some style I used, to find more go on [Prettier.io](https://prettier.io/docs/en/options.html)).
+* `style` - prettier will format all your code (On .prettierrc.json you will find some style I used, to find more go on [Prettier.io](https://prettier.io/docs/en/options.html))
+
 As Webpack plugin you will find:
 * babel-loader, a JS transpiller needed to transform our modern JavaScript code to browser-compatible JavaScript code before bundling it:
 * sass-loader, to loads a Sass/SCSS file and compiles it to CSS;
@@ -51,17 +54,19 @@ As Webpack plugin you will find:
 - Added Webpack as Dev Server
 - Added Prettier & AirBnB to properly work with ESlint
 - Better File Organization
+
 *What's next?
-- [] Fix Prettier
-- [] Add MVC file pattern
-- []better documentation
-- [] production mode on webpack
-- [] better setupo of handlebars.js
+- [ ] Fix Prettier
+- [ ] Add MVC file pattern
+- [ ]better documentation
+- [ ] production mode on webpack
+- [ ] better setupo of handlebars.js
 
 
 
 # You wanna try it or use it on your workflow?
-Clone this repo `git clone https://github.com/ReverbOD/mvc-nodejs-sql-skeleton.git`, then install all the dependencies writing in the terminal `$ npm i`.
+- Clone this repo `git clone https://github.com/ReverbOD/andromeda.git` 
+- open terminal `$ npm i`.
 
 
 # Webpack
