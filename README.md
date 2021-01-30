@@ -1,25 +1,9 @@
-# MVC skeleton
-**A ready-to-use skeleton for a nodejs/express app with a sql db**
+<img  src="./cover.png"/>
 
-## Authors                                                  
-**Giuseppe Gigliotti** - [ReverbOD](https://gigliottigiuseppe.it)
- 
-## Built With
-### Back End:
-* [nodejs:](https://nodejs.org/en/) - Build entirely with nodejs for the back-end part
-* [express.js](https://expressjs.com/it/) - used to create handle routing and process requests from the client.
-* [body-parser](https://www.npmjs.com/package/body-parser) - Used to parse incoming request from the client.
-* [MySQL](https://www.npmjs.com/package/mysql) - Node JS driver for MySQL.
-* [nodemon](https://www.npmjs.com/package/nodemon) - Installed globally. It is used to watch for changes to files and automatically restart the server.
-* [ejs](https://ejs.co/) - templating engine to render html pages for the app.
 
-### Front End
-* [Sass](https://sass-lang.com/) - Css Pre-processor.
-* [PostCSS](https://postcss.org/) - A tool for transforming CSS with JavaScript.
+# What is Andromeda?
+**Andromeda is my personal MVC boilerplate that I use in my regular workflow to create website & web application builded with Express.JS, Webpack as compiler & Dev Server and Handlebars.js as template engine to render views.**
 
-### Tool I've used
-* [webpack:](https://webpack.js.org/) - webpack is a static module bundler for modern JavaScript applications.
-* [ESlint:](https://eslint.org/) - ESLint statically analyzes your code to quickly find problems.
 
 # What is MVC?
 The *Model-View-Controller* (MVC) is an architectural pattern that separates an application into three main logical components Model, View, and Controller.
@@ -27,17 +11,72 @@ The *Model-View-Controller* (MVC) is an architectural pattern that separates an 
 * **Controller** is that part of the application that handles the user interaction;
 * **Model** The model component stores data and its related logic. It represents data that is being transferred between controller components or any other related business logic;
 
-# How to use
-Clone this repo `git clone https://github.com/ReverbOD/mvc-nodejs-sql-skeleton.git`, then install all the dependencies writing in the terminal `$ npm i`.
 
-# How to use webpack
-In `src/media` are stored all the CSS/JS/Sass file that you need to compile (if you need more JS/Sass/CSS remember to add it on `src/js/index.js` typing `import '../yourFolder/fileYouNeed;` and then run webpack with `npm run build` to compile all your file.
-Here I've used:
+
+## Built With
+### Back End:
+* [express.js](https://expressjs.com/it/) - Used to create handle routing and process requests from the client.
+* [MySQL](https://www.npmjs.com/package/mysql) - Node JS driver for MySQL.
+### Front End
+* [Scss](https://sass-lang.com/) - Awesome css pre-processor.
+* [PostCSS](https://postcss.org/) - A tool for transforming CSS with JavaScript.
+* [handlebars](https://handlebarsjs.com/) - templating engine to render html pages for js.
+### Tool
+* [Webpack:](https://webpack.js.org/) - As dev server & compiler for scss & js.
+* [ESlint:](https://eslint.org/) - to check error & enforce lint.
+* [Prettier:](https://prettier.io/) - A code formatter.
+* [AirBnB:](https://airbnb.io/javascript/) - A JavaScript style guide.
+  
+### Webpack
+In `src/views/assests` are stored all the scss & js files that you need to compile.
+*Commands Guide:
+* `build` - this will launch automatic build with webpack
+* `start` - launch the dedicated dev server on port 3000
+* `style` - prettier will format all your code (On .prettierrc.json you will find some style I used, to find more go on [Prettier.io](https://prettier.io/docs/en/options.html)).
+As Webpack plugin you will find:
 * babel-loader, a JS transpiller needed to transform our modern JavaScript code to browser-compatible JavaScript code before bundling it:
 * sass-loader, to loads a Sass/SCSS file and compiles it to CSS;
 * postcss-loader, a tool for transforming styles with JS plugins.I've lefted the config file empty, so you can add the plugin you need;
 * mini-css-extract-plugin, a plugin i need to extract all the transformed CSS from Sass into a separate "bundle";
 * file-loader, for manage the imgs and font in the CSS/Sass, resolves import/require() on a file into a url and emits the file into the output directory;
+* handlebars-loader, A handlebars template loader for webpack;
 
-## Production Mode on Webpack
-Type `npm run build-production` for production mode
+
+
+# Changelog:
+*What's new?
+- Replaced .ejs with handlebars.js
+- Improved Webpack with plugin
+- Improved code (Less code)
+- Added Webpack as Dev Server
+- Added Prettier & AirBnB to properly work with ESlint
+- Better File Organization
+*What's next?
+- [] Fix Prettier
+- [] Add MVC file pattern
+- []better documentation
+- [] production mode on webpack
+- [] better setupo of handlebars.js
+
+
+
+# You wanna try it or use it on your workflow?
+Clone this repo `git clone https://github.com/ReverbOD/mvc-nodejs-sql-skeleton.git`, then install all the dependencies writing in the terminal `$ npm i`.
+
+
+# Webpack
+In `src/views/assests` are stored all the scss & js files that you need to compile.
+*Commands Guide:
+* `build` - this will launch automatic build with webpack
+* `start` - launch the dedicated dev server on port 3000
+* `style` - prettier will format all your code (On .prettierrc.json you will find some style I used, to find more go on [Prettier.io](https://prettier.io/docs/en/options.html)).
+As Webpack plugin you will find:
+* babel-loader, a JS transpiller needed to transform our modern JavaScript code to browser-compatible JavaScript code before bundling it:
+* sass-loader, to loads a Sass/SCSS file and compiles it to CSS;
+* postcss-loader, a tool for transforming styles with JS plugins.I've lefted the config file empty, so you can add the plugin you need;
+* mini-css-extract-plugin, a plugin i need to extract all the transformed CSS from Sass into a separate "bundle";
+* file-loader, for manage the imgs and font in the CSS/Sass, resolves import/require() on a file into a url and emits the file into the output directory;
+* handlebars-loader, A handlebars template loader for webpack;
+
+## Authors                                                  
+**Giuseppe Gigliotti** - [ReverbOD](https://reverbod.github.io/)

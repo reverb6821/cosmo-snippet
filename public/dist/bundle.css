@@ -1,0 +1,22 @@
+/*
+    *************************************
+            !MAIN SCSS FILE
+    Import Here all your variables/components
+    *************************************
+*/
+/*
+    *************************************
+    !INSERT/EDIT ALL SCSS VARIABLES HERE
+    *************************************
+*/
+.header {
+  background-color: yellow;
+}
+
+.footer {
+  background-color: green;
+}
+
+.main {
+  background-color: blue;
+}

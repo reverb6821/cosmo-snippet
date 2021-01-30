@@ -1,0 +1,14 @@
+/*
+    *************************************
+            !MAIN SCSS FILE
+    Import Here all your variables/components
+    *************************************
+*/
+
+@import './variables/variables'; // *scss variables
+@import './components/header.scss'; // *header component
+@import './components/footer.scss'; // *footer component
+
+.main{
+    background-color: $main;
+}

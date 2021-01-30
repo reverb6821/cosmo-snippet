@@ -1,80 +1,95 @@
-// Webpack uses this to work with directories
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-
-  // Entry point
-  entry: './src/media/js/index.js',
-
-  // Output
+  entry: './src/views/assests/javascript/script.js',
+  watch: true,
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, './public/dist'),
+    filename: 'bundle.js',
   },
+  mode: 'development',
+
   module: {
     rules: [
-        //Babel Rules
-        {
-            test: /\.m?js$/,
-            exclude: /(node_modules|bower_components)/,
-            use: {
-              loader: 'babel-loader',
-              options: {
-                presets: ['@babel/preset-env']
-              }
-            }
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
           },
-          // SASS rules
+        },
+      },
+      {
+        test: /\.hbs$/,
+        loader: 'handlebars-loader',
+        options: {
+           inlineRequires: '/assets/'
+        }
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
           {
-            test: /\.(sa|sc|c)ss$/,
-            use: [
-                {
-                    loader: MiniCssExtractPlugin.loader
-                },
-                {
-                    loader: "css-loader",
-                },
-                {
-                    loader: "postcss-loader"
-                },
-                {
-                    loader: "sass-loader",
-                    options: {
-                        implementation: require("sass")
-                    }
-                }
-            ]
-        },
-        {
-            test: /\.(png|jpe?g|gif|svg)$/,
-            use: [
-                {
-                    loader: "file-loader",
-                    options: {
-                        outputPath: 'images'
-                    }
-                }
-            ]
-        },
-        {
-            test: /\.(woff|woff2|ttf|otf|eot)$/,
-            use: [
-                {
-                    loader: "file-loader",
-                    options: {
-                        outputPath: 'fonts'
-                    }
-                }
-            ]
-        }    
-    ]
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              // eslint-disable-next-line global-require
+              implementation: require('sass'),
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|ttf|otf|eot)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'fonts',
+            },
+          },
+        ],
+      },
+    ],
   },
-  plugins: [
 
+  plugins: [
     new MiniCssExtractPlugin({
-      filename: "bundle.css"
-    }) 
+      filename: 'bundle.css',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Andromeda - MVC Boilerplate',
+      template: './src/views/index.hbs',
+      filename: 'index.html'
+    }),
   ],
+
+  devtool: 'eval-cheap-module-source-map',
+  devServer: {
+    // contentBase: path.join(__dirname, 'dist'),
+    port: 3000,
+  },
 };

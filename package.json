@@ -1,52 +1,56 @@
 {
-  "name": "mvc-nodejs-sql-skeleton",
-  "version": "1.2.0",
-  "description": "A MVC skeleton ready to use for NodeJS with a SQL DB",
+  "name": "andromeda",
+  "version": "1.0.0",
+  "description": "Andromeda is my personal MVC boilerplate that I use in my regular workflow to create website & web application builded with Express.JS, Webpack as compiler & Dev Server and Handlebars.js as template engine to render views.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "build-production": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+    "start": "webpack serve --hot --inline",
+    "style": "npx prettier --write ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://https://github.com/ReverbOD/mvc-nodejs-sql-skeleton.git"
+    "url": "git+https://github.com/ReverbOD/andromeda.git"
   },
   "keywords": [
-    "nodejs",
-    "express",
-    "sql",
     "mvc",
     "javascript",
-    "ejs"
+    "webpack",
+    "dev-server",
+    "scss"
   ],
   "author": "Giuseppe Gigliotti",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ReverbOD/nodejs-mvc-skeleton-for-sql/issues"
+    "url": "https://github.com/ReverbOD/andromeda/issues"
   },
-  "homepage": "https://github.com/ReverbOD/nodejs-mvc-skeleton-for-sql#readme",
+  "homepage": "https://github.com/ReverbOD/andromeda#readme",
   "devDependencies": {
-    "@babel/core": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
-    "babel-loader": "^8.1.0",
-    "cross-env": "^7.0.2",
-    "css-loader": "^4.2.0",
-    "eslint": "^7.6.0",
-    "file-loader": "^6.0.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "nodemon": "^2.0.4",
-    "postcss-loader": "^3.0.0",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.0.0-beta.6",
+    "mini-css-extract-plugin": "^1.3.5",
+    "postcss-loader": "^4.2.0",
     "prettier": "2.2.1",
-    "sass": "^1.26.10",
-    "sass-loader": "^9.0.2",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1",
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "ejs": "^3.1.3",
     "express": "^4.17.1",
-    "mysql": "^2.18.1",
-    "style-loader": "^1.2.1"
+    "handlebars": "^4.7.6",
+    "handlebars-loader": "^1.7.1"
   }
 }
