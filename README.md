@@ -54,14 +54,12 @@ As Webpack plugin you will find:
 - Added Webpack as Dev Server
 - Added Prettier & AirBnB to properly work with ESlint
 - Better File Organization
+- Add MVC file pattern
 
 *What's next?
 - [ ] Fix Prettier
-- [ ] Add MVC file pattern
-- [ ]better documentation
+- [ ] better documentation
 - [ ] production mode on webpack
-- [ ] better setupo of handlebars.js
-
 
 
 # You wanna try it or use it on your workflow?
