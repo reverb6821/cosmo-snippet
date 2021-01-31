@@ -9,14 +9,160 @@
     !INSERT/EDIT ALL SCSS VARIABLES HERE
     *************************************
 */
-.header {
-  background-color: yellow;
+.main header {
+  position: relative;
+  top: 5%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
 }
 
-.footer {
-  background-color: green;
+.main header .logo {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  left: 10%;
+  font-size: 1.5em;
+  font-weight: 650;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main header nav {
+  position: relative;
+  left: 30%;
+  color: #fff;
+  width: 50%;
+  height: 100%;
+}
+
+.main header nav ul {
+  height: 100%;
+  width: 100%;
+}
+
+.main header nav ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.main header nav ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.main header nav ul li a.active,
+.main header nav ul li a:hover {
+  color: #2ecc17;
+}
+
+.main header .icons {
+  position: relative;
+  left: 30%;
+}
+
+.main header .icons a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main header .icons a i {
+  font-size: 0.89em;
+  margin: 0 5px;
+  text-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.main header .icons a:nth-child(1) {
+  color: lightblue;
+}
+
+.main header .icons a:nth-child(3) {
+  color: skyblue;
+}
+
+.main header .icons a:nth-child(2) {
+  color: orange;
+}
+
+.main header .icons a:nth-child(4) {
+  color: red;
+}
+
+.main .info {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.main .info h1 {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 3.5em;
+  color: #ff0;
+  letter-spacing: 2px;
+}
+
+.main .info p {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 1.8em;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 2% 0;
+  margin-bottom: 3%;
+}
+
+.main .info a {
+  margin: 0 0.5%;
+  text-decoration: none;
+  color: #fff;
+  border: 1.5px solid #2ecc17;
+  background: #2ecc17;
+  padding: 10px 15px;
+  text-shadow: none;
+  font-family: sans-serif;
+  font-size: 0.99em;
+}
+
+.main .info a:last-child {
+  border-color: #fff;
+  background: transparent;
+}
+
+.main .info a:hover {
+  border-color: #2ecc17;
+  background: #2ecc17;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: #fff;
 }
 
 .main {
-  background-color: blue;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(images/ae8ebf5afbeb23f30b7fdea08fb11315.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 }

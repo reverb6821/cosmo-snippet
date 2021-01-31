@@ -7,6 +7,7 @@ module.exports = {
   watch: true,
   output: {
     path: path.resolve(__dirname, './public/dist'),
+    publicPath: '',
     filename: 'bundle.js',
   },
   mode: 'development',
@@ -27,7 +28,7 @@ module.exports = {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
         options: {
-           inlineRequires: '/assets/'
+           inlineRequires: '/views/assests/'
         }
       },
       {
