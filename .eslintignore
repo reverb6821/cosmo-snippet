@@ -1,3 +1,8 @@
+/.eslintrc
 /node_modules
-/dist
-*.ejs
+/prettierrc
+/prettierignore
+/.gitignore
+/package.json
+/yarn.lock
+/client/
