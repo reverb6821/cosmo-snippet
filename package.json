@@ -1,79 +1,26 @@
 {
   "name": "andromeda",
   "version": "2.0.1",
-  "description": "Andromeda is a template for build modern Web App/PWA on a top of Express.JS as server and React as front end",
-  "main": "./server/server.js",
+  "description": "Andromeda is a template to build modern WebApp/PWA with React.JS on a top of a server builded with Express.js",
+  "main": "server.js",
   "repository": "https://github.com/reverb6821/andromeda.git",
   "author": "Giuseppe Gigliotti <giuseppegigliottidev@gmail.com>",
   "license": "MIT",
+  "private": false,
   "scripts": {
-    "start": "node server/server.js",
-    "lint:eslint": "eslint . --ext .ts,.js,.tsx,.jsx",
-    "lint:eslint:fix": "eslint . --ext .ts,.js,.tsx,.jsx --fix",
-    "prettify": "prettier --write **/*.{ts,tsx,js,jsx,json}",
-    "lint-staged": "lint-staged"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit-lint": "lint-staged",
-      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "post-applypatch": "echo \"[Husky] post-applypatch\"",
-      "pre-commit": "echo \"[Husky] pre-commit\"",
-      "pre-merge-commit": "echo \"[Husky] pre-merge-commit\"",
-      "prepare-commit-msg": "echo \"[Husky] prepare-commit-msg\"",
-      "commit-msg": "echo \"[Husky] commit-msg\"",
-      "post-commit": "echo \"[Husky] post-commit\"",
-      "pre-rebase": "echo \"[Husky] pre-rebase\"",
-      "post-checkout": "echo \"[Husky] post-checkout\"",
-      "post-merge": "echo \"[Husky] post-merge\"",
-      "pre-push": "echo \"[Husky] pre-push\"",
-      "pre-receive": "echo \"[Husky] pre-receive\"",
-      "update": "echo \"[Husky] update\"",
-      "post-receive": "echo \"[Husky] post-receive\"",
-      "post-update": "echo \"[Husky] post-update\"",
-      "reference-transaction": "echo \"[Husky] reference-transaction\"",
-      "push-to-checkout": "echo \"[Husky] push-to-checkout\"",
-      "pre-auto-gc": "echo \"[Husky] pre-auto-gc\"",
-      "post-rewrite": "echo \"[Husky] post-rewrite\"",
-      "sendemail-validate": "echo \"[Husky] sendemail-validate\"",
-      "fsmonitor-watchman": "echo \"[Husky] fsmonitor-watchman\"",
-      "p4-changelist": "echo \"[Husky] p4-changelist\"",
-      "p4-prepare-changelist": "echo \"[Husky] p4-prepare-changelist\"",
-      "p4-post-changelist": "echo \"[Husky] p4-post-changelist\"",
-      "p4-pre-submit": "echo \"[Husky] p4-pre-submit\"",
-      "post-index-change": "echo \"[Husky] post-index-change\""
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "yarn lint:eslint:fix && yarn prettify",
-      "git add --force"
-    ],
-    "*.{ts,tsx,js,jsx,json}": [
-      "yarn lint:eslint:fix && yarn prettify",
-      "git add --force"
-    ]
+    "dev": "ts-node-dev --respawn --pretty --transpile-only server.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.13",
-    "@types/morgan": "^1.9.3",
-    "@typescript-eslint/eslint-plugin": "^4.31.2",
-    "@typescript-eslint/parser": "^4.31.2",
-    "eslint": "^7.32.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "express": "^4.17.1",
-    "husky": "^7.0.2",
-    "lint-staged": "^11.1.2",
-    "prettier": "^2.4.1",
-    "typescript": "^4.4.3"
-  },
-  "dependencies": {
+    "@types/helmet": "^4.0.0",
+    "@types/node": "^16.10.0",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "morgan": "^1.10.0"
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.3"
   }
 }

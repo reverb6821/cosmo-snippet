@@ -1,8 +1,0 @@
-.eslintrc
-node_modules
-prettierrc
-prettierignore
-.gitignore
-package.json
-yarn.lock
-client/
