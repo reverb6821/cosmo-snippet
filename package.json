@@ -8,7 +8,11 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "ts-node-dev --respawn --pretty --transpile-only server.ts"
+    "serve-back": "ts-node-dev --respawn --pretty --transpile-only server.ts",
+    "build-back": "tsc server.ts",
+    "start-back": "yarn build-back && node server.js",
+    "dev-fe":"cd client && yarn react-scripts start",
+    "dev-serve": "yarn start-back && yarn dev-fe"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
