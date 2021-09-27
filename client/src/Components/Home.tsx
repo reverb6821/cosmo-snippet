@@ -75,12 +75,11 @@ const ColumnRight = styled.div`
 `;
 
 const Home = () => {
-  const [data, setData] = React.useState(null);
-
+  const [response, setData] = React.useState(null);
   React.useEffect(() => {
     fetch('/api')
       .then((res) => res.json())
-      .then((data) => setData(data.message));
+      .then((response) => setData(response.message));
   }, []);
 
   const fadeLeft = {
@@ -96,7 +95,7 @@ const Home = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}>
-            Welcome to {!data ? 'Loading...' : data}
+            Welcome to {!response ? 'Loading...' : response}
           </motion.h1>
           <motion.p
             variants={fadeLeft}

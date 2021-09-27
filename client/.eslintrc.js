@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { off } = require('process');
 
 const prettierOptions = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'),
@@ -25,23 +26,12 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  parser: '@typescript-eslint/parser',
   plugins: ['react', '@typescript-eslint', 'jsx-a11y', 'import', 'prettier'],
   rules: {
     'prettier/prettier': ['error', prettierOptions],
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'no-shadow': 'off',
-    "semi": "off",
-    "@typescript-eslint/semi": "error",
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        'js': 'never',
-        'jsx': 'never',
-        'ts': 'never',
-        'tsx': 'never'
-      }
-  ],
+    '@typescript-eslint/no-shadow': ['off'],
   },
 };
