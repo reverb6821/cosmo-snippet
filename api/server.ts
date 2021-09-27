@@ -21,7 +21,7 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(path.resolve(__dirname, '../client/build'))); //? this will make react app visible to server
+app.use(express.static(path.resolve(__dirname, '../dist/client'))); //? this will make react app visible to server
 
 //? use all routes
 app.use('/', router);
