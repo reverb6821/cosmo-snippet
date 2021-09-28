@@ -2,7 +2,7 @@
   "name": "andromeda",
   "version": "2.0.1",
   "description": "Andromeda is a template to build modern WebApp/PWA with React.JS on a top of a server builded with Express.js",
-  "main": "server.js",
+  "main": "./dist/server.js",
   "repository": "https://github.com/reverb6821/andromeda.git",
   "author": "Giuseppe Gigliotti <giuseppegigliottidev@gmail.com>",
   "license": "MIT",
