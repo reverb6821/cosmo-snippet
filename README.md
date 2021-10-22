@@ -31,6 +31,29 @@ The *Model-View-Controller* (MVC) is an architectural pattern that separates an 
 * [Prettier:](https://prettier.io/) - A code formatter.
 * [AirBnB:](https://airbnb.io/javascript/) - A JavaScript style guide.
 
+### Project Structure
+```
+.
+├── api                             # API root file
+│   ├── lib                         # Utility setup
+│   ├── routes                      # Where routes was setted
+|   ├── services                    # All services
+│   └── server.ts                   # Entry point for server
+├── client                          # React root directory
+│   ├── public                      # Public root file
+│   ├── src                         
+|   │   ├── Assets                  # Assets file
+|   │   ├── Pages                   # Pages directory
+|   |   ├── lib                     # Entry file for React App
+|   │   └── App.tsx 
+|   ├── env                         # Components for home page
+│   └── package.json 
+├── .env                            # Enviroment variables
+├── .gitignore
+├── package.json
+└── tsconfig.json
+```
+
 # Changelog:
 *What's new?
 - Rewrited with TypeScript
