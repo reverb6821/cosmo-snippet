@@ -38,6 +38,10 @@ The *Model-View-Controller* (MVC) is an architectural pattern that separates an 
 │   ├── lib                         # Utility setup
 │   ├── routes                      # Where routes was setted
 |   ├── services                    # All services
+|   ├── .env                        # Enviroment variables
+|   ├── .gitignore
+|   ├── package.json
+|   ├── tsconfig.json
 │   └── server.ts                   # Entry point for server
 ├── client                          # React root directory
 │   ├── public                      # Public root file
@@ -48,10 +52,7 @@ The *Model-View-Controller* (MVC) is an architectural pattern that separates an 
 |   │   └── App.tsx 
 |   ├── env                         # Components for home page
 │   └── package.json 
-├── .env                            # Enviroment variables
-├── .gitignore
-├── package.json
-└── tsconfig.json
+└── package.json                    # Entry project directory
 ```
 
 # Changelog:
