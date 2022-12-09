@@ -1,21 +1,20 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorHandler from './lib/errorHandler'
 
-import ErrorHandler from './lib/errorHandler';
+import Home from './views/Home'
+import NotFound from './views/NotFound'
 
-import Home from './Pages/Home';
-import Page404 from './Pages/Page404';
-
-function App() {
-    return (
-        <BrowserRouter>
+function App () {
+  return (
+        <Router>
             <ErrorHandler>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route component={Page404} />
-                </Switch>
+                <Routes>
+                    <Route path="/" element={<Home/>} />
+                    <Route element={<NotFound/>} />
+                </Routes>
             </ErrorHandler>
-        </BrowserRouter>
-    );
+        </Router>
+  )
 }
 
-export default App;
+export default App

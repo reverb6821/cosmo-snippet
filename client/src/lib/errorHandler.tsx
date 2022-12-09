@@ -1,19 +1,19 @@
-import { useLocation } from 'react-router-dom';
-import { get } from 'lodash';
-import Page404 from '../Pages/Page404';
+import { useLocation } from 'react-router-dom'
+import { get } from 'lodash'
+import NotFound from '../views/NotFound'
 
 const ErrorHandler = ({ children }) => {
-    const location = useLocation();
+  const location = useLocation()
 
-    switch (get(location.state, 'errorStatusCode')) {
-        case 404:
-            return <Page404 />;
+  switch (get(location.state, 'errorStatusCode')) {
+    case 404:
+      return <NotFound />
 
-        // ... cases for other types of errors
+      // ... cases for other types of errors
 
-        default:
-            return children;
-    }
-};
+    default:
+      return children
+  }
+}
 
-export default ErrorHandler;
+export default ErrorHandler

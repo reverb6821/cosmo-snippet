@@ -8,11 +8,14 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "webapp:install": "cd ./api && yarn install",
-    "webapp:serve:dev": "cd ./api && yarn run lint:eslint:fix && yarn run backend::serve",
-    "webapp:client:dev": "cd ./client && yarn run lint:prettify && yarn run start",
-    "webapp:run:dev": "yarn run webapp:serve:dev &&  yarn run webapp:client:dev",
-    "webapp:run:build": "",
-    "webapp:run:prod": ""
+    "server:install": "cd server/ && npm install",
+    "client:install": "cd client/ && npm install",
+    "app:install":"concurrently \"npm run api:install\" \"npm run client:install\"",
+    "app:serve:dev": "cd server/ && npm run start",
+    "client:serve:dev": "cd client/ && npm run dev",
+    "app:dev":"concurrently \"npm run app:serve:dev\" \"npm run client:serve:dev\""
+  },
+  "dependencies": {
+    "concurrently": "^7.4.0"
   }
 }

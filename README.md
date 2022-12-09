@@ -46,8 +46,8 @@ The *Model-View-Controller* (MVC) is an architectural pattern that separates an 
 ├── client                          # React root directory
 │   ├── public                      # Public root file
 │   ├── src                         
-|   │   ├── Assets                  # Assets file
-|   │   ├── Pages                   # Pages directory
+|   │   ├── assets                  # assets file
+|   │   ├── views                   # views directory
 |   |   ├── lib                     # Entry file for React App
 |   │   └── App.tsx 
 |   ├── env                         # Components for home page
