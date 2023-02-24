@@ -1,4 +1,4 @@
-<img  src="./andromeda.png"/>
+
 
 
 # What is Andromeda?
