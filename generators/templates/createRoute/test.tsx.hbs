@@ -1,0 +1,9 @@
+import React from 'react';
+import { render } from '@testing-library/react';
+import {{pascalCase route}} from './{{pascalCase route}}';
+
+test('renders learn react link', () => {
+  const { getByText } = render(<{{pascalCase route}} />);
+  const linkElement = getByText(/{{pascalCase route}} Component/i);
+  expect(linkElement).toBeInTheDocument();
+});
