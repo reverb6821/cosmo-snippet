@@ -1,5 +1,6 @@
 # Initialize project
 
+* install pnpm ```npm install -g pnpm```
 * Launch ```pnpm setup project```
 * Launch ```pnpm prepare```
 * In the terminal, set the commitlint hook with ```npx husky add .husky/commit-msg 'npx commitlint --edit $1'```. If add command is deprecated, use ```echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg```
