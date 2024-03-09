@@ -1,7 +1,13 @@
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:import/recommended', 'plugin:import/typescript', 'plugin:storybook/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:import/recommended',
+    'plugin:import/typescript'
+  ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
@@ -17,6 +23,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    //* importer rules
     'import/no-unresolved': 'error',
     'import/order': [
       'error',
@@ -38,5 +45,11 @@ module.exports = {
         },
       },
     ],
+    //* es rule
+    'prefer-const': 'warn',
+    'no-var': 'warn',
+    'no-unused-vars': 'warn',
+    'object-shorthand': 'warn',
+    'quote-props': ['warn', 'as-needed'],
   },
 }
