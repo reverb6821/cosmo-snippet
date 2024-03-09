@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { Outlet } from 'react-router-dom'
 
-const Dashboard: React.FC = () => {
+const Main: React.FC = () => {
     return(
         <React.Fragment>
+            Main Page
             <Outlet />
         </React.Fragment>
 )};
 
-export default Dashboard
+export default Main
