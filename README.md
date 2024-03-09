@@ -5,6 +5,14 @@
 * Launch ```pnpm prepare```
 * Launch the app with ```pnpm run dev```
 
+## Generator
+The generator is used to automatically generate standard structure of components and elements that can be modified later to make them suitable for use. To use it, launch the command ```pnpm generate```and select the parameter you are interested in.
+Is present:
+* **page**: the father element (example Dashboard, Main ecc).
+* **route**: the children element, to insert inside the page.
+* **component**: a simply component, like form, table etc.
+* **hook**: if you need a custom hook, create the structure with this command.
+
 ## commit convention explaination
 in follow the conventionalcommit:[https://www.conventionalcommits.org/en/v1.0.0/].
 This is an example of valid commit msg:
