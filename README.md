@@ -28,6 +28,10 @@ This is the accepted msg:
 * **revert**: Indicates changes that undo a previous commit. Examples: Restoring a previous version of code, undoing an incorrect change, etc12.
 * **style**: Represents changes that affect only formatting, whitespace, or semicolons. Examples: Adjusting indentation, correcting formatting errors, etc12.
 
+If you need the scope of commit you can addit.
+Example
+```feat(UI): added new table to user page```
+
 ## .huskyrc config
 need css, add this on .lintstagedrc
 ```    
