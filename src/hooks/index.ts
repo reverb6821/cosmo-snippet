@@ -1,0 +1,7 @@
+//! hook:import
+
+const customHook = {
+//! hook:declaration
+}
+    
+export default customHook

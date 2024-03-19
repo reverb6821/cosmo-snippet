@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { Outlet } from 'react-router-dom'
 
-const Main: React.FC = () => {
-    return(
-        <React.Fragment>
+const Main: React.FC = () => (
+  <React.Fragment>
             Main Page
-            <Outlet />
-        </React.Fragment>
-)};
+    <Outlet />
+  </React.Fragment>
+);
 
 export default Main
