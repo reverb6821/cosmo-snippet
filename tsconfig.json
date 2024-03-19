@@ -23,10 +23,18 @@
     /* Path Aliases */
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@routes/*": ["src/routes/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@assets/*": ["src/assets/*"],
+      /* if need more folder, add here*/
     },
+
     /* custom */
     "useUnknownInCatchVariables": false,
+    "esModuleInterop": true,
   },
   "include": ["src", "./jest.setup.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
