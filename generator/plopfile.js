@@ -1,11 +1,11 @@
 export default function (plop) {
-  plop.setGenerator('create-page', {
-    description: 'Create a new React Page',
+  plop.setGenerator('\x1b[34mcreate-page', {
+    description: '\x1b[32mCreate a new React Page',
     prompts: [
       {
         type: 'input',
         name: 'page',
-        message: 'Page name:',
+        message: '\x1b[36mPage name:',
       },
     ],
     actions: [
@@ -26,13 +26,13 @@ export default function (plop) {
       },
     ],
   }),
-  plop.setGenerator('create-route', {
-    description: 'Create a new React route',
+  plop.setGenerator('\x1b[34mcreate-route', {
+    description: '\x1b[32mCreate a new React route',
     prompts: [
       {
         type: 'input',
         name: 'route',
-        message: 'Route name:',
+        message: '\x1b[36mRoute name:',
       },
     ],
     actions: [
@@ -65,13 +65,13 @@ export default function (plop) {
       },
     ],
   }),
-  plop.setGenerator('create-component', {
-    description: 'Create a new React component',
+  plop.setGenerator('\x1b[34mcreate-component', {
+    description: '\x1b[32mCreate a new React component',
     prompts: [
       {
         type: 'input',
         name: 'component',
-        message: 'Component name:',
+        message: '\x1b[36mComponent name:',
       },
     ],
     actions: [
@@ -95,15 +95,31 @@ export default function (plop) {
         path: '../src/components/{{pascalCase component}}/__tests__/{{pascalCase component}}.test.tsx',
         templateFile: './templates/createComponent/test.tsx.hbs',
       },
+      {
+        type: 'add',
+        path: '../src/stories/{{pascalCase component}}/{{pascalCase component}}.stories.tsx',
+        templateFile: './templates/createComponent/stories.tsx.hbs',
+      },
+      {
+        type: 'add',
+        path: '../src/stories/{{pascalCase component}}/{{pascalCase component}}.mdx',
+        templateFile: './templates/createComponent/stories.mdx.hbs',
+      },
     ],
   });
-  plop.setGenerator('generate-hook', {
-    description: 'Create a new Custom Hook',
+  plop.setGenerator('\x1b[34mgenerate-hook', {
+    description: '\x1b[32mCreate a new Custom Hook',
     prompts: [
       {
         type: 'input',
         name: 'name',
-        message: 'Hook Name:',
+        message: '\x1b[36mHook Name:',
+        validate: (value) => {
+          if (value.trim().toLowerCase().startsWith('use')) {
+            return true;
+          }
+          return '\x1b[31mERROR:\x1b[0m hook should start with use (example useFetchData).';
+        }
       },
     ],
     actions: [
