@@ -6,7 +6,7 @@ const Main = React.lazy(()=> import('@pages/Main'))
 const Home = React.lazy(()=> import('@routes/Home'))
 //! route:import
 
-const Router:React.FC =()=> (
+const RootComponent:React.FC =()=> (
   <React.Fragment>
     <Routes>
       <Route element={<React.Suspense fallback={<div>Loading...</div>}><Main/></React.Suspense>}>
@@ -18,4 +18,4 @@ const Router:React.FC =()=> (
   </React.Fragment>
 )
 
-export default Router
+export default RootComponent
