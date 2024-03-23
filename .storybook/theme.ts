@@ -4,6 +4,10 @@ import { create } from '@storybook/theming/create';
 export default create({
   base: 'light',
 
+  // Brand color
+  colorPrimary: '#282C31',
+  colorSecondary: '#1883FE',
+
   // Typography
   fontBase: '"Open Sans", sans-serif',
   fontCode: 'monospace',
@@ -13,30 +17,24 @@ export default create({
   // brandImage: '../src/stories/assets/logo.jpg',
   brandTarget: '_self',
 
-  //
-  colorPrimary: '#3A10E5',
-  colorSecondary: '#585C6D',
-
   // UI
-  appBg: '#ffffff',
-  appContentBg: '#ffffff',
-  appPreviewBg: '#ffffff',
-  appBorderColor: '#585C6D',
-  appBorderRadius: 4,
+  appBg: '#F7F7F9',
+  appContentBg: '#FFF',
+  appBorderColor: '#E1E5EA',
+  appBorderRadius: 5,
 
   // Text colors
-  textColor: '#10162F',
-  textInverseColor: '#ffffff',
+  textColor: '#282C31',
+  textInverseColor: 'rgba(255,255,255,0.9)',
 
   // Toolbar default and active colors
-  barTextColor: '#9E9E9E',
-  barSelectedColor: '#585C6D',
-  barHoverColor: '#585C6D',
-  barBg: '#ffffff',
+  barTextColor: '#939598',
+  barSelectedColor: '#1883FE',
+  barBg: '#FFF',
 
   // Form colors
-  inputBg: '#ffffff',
-  inputBorder: '#10162F',
-  inputTextColor: '#10162F',
-  inputBorderRadius: 2,
+  inputBg: '#FFF',
+  inputBorder: '#E1E5EA',
+  inputTextColor: '#282C31',
+  inputBorderRadius: 3,
 });
