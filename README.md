@@ -2,8 +2,7 @@
 
 * install pnpm ```npm install -g pnpm```.
 * install [bettercomments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) extension.
-* Launch ```pnpm setup project``` to setup husky.
-* Launch ```pnpm prepare``` to setup husky and commitlint hooks for git.
+* Launch ```pnpm setup:project``` to setup husky.
 * Launch the app with ```pnpm run dev```
 
 
