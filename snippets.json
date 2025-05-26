@@ -1,0 +1,575 @@
+{
+    "console.log": {
+        "prefix": "clg",
+        "body": [
+            "console.log('data')"
+        ],
+        "description": "console.log"
+    },
+    "console.error": {
+        "prefix": "cer",
+        "body": [
+            "console.error('data')"
+        ],
+        "description": "console.error"
+    },
+    "console.warn": {
+        "prefix": "cwarn",
+        "body": [
+            "console.warn('data')"
+        ],
+        "description": "console.warn"
+    },
+    "console.info": {
+        "prefix": "cinfo",
+        "body": [
+            "console.info('data')"
+        ],
+        "description": "console.info"
+    },
+    "console.table": {
+        "prefix": "ctab",
+        "body": [
+            "console.table('data')"
+        ],
+        "description": "console.table"
+    },
+    "Function Declaration": {
+        "prefix": "fn",
+        "body": [
+            "function $1($2) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Basic function declaration"
+    },
+    "TypeScript Interface": {
+        "prefix": "interface",
+        "body": [
+            "interface $1 {",
+            "\t$2: $3;",
+            "}"
+        ],
+        "description": "Define a TypeScript interface"
+    },
+    "Arrow Function": {
+        "prefix": "arrow",
+        "body": [
+            "const $1 = ($2) => {",
+            "\t$0",
+            "};"
+        ],
+        "description": "Arrow function syntax"
+    },
+    "For Loop": {
+        "prefix": "forloop",
+        "body": [
+            "for (let i = 0; i < $1; i++) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Basic for loop"
+    },
+    "Array Map": {
+        "prefix": "map",
+        "body": [
+            "$1.map(($2) => {",
+            "\treturn $0;",
+            "});"
+        ],
+        "description": "Array map loop"
+    },
+    "Array Filter": {
+        "prefix": "filter",
+        "body": [
+            "$1.filter(($2) => $2.$3 === $4);"
+        ],
+        "description": "Array filter method"
+    },
+    "Array Reduce": {
+        "prefix": "reduce",
+        "body": [
+            "$1.reduce(($2, $3) => {",
+            "\t$0",
+            "}, $4);"
+        ],
+        "description": "Array reduce method"
+    },
+    "Array Find": {
+        "prefix": "find",
+        "body": [
+            "$1.find(($2) => $2.$3 === $4);"
+        ],
+        "description": "Array find method"
+    },
+    "Array Includes": {
+        "prefix": "includes",
+        "body": [
+            "$1.includes($2);"
+        ],
+        "description": "Check if an array includes a value"
+    },
+    "Array Push": {
+        "prefix": "push",
+        "body": [
+            "$1.push($2);"
+        ],
+        "description": "Push an item to an array"
+    },
+    "Array Pop": {
+        "prefix": "pop",
+        "body": [
+            "$1.pop();"
+        ],
+        "description": "Pop an item from an array"
+    },
+    "Array Shift": {
+        "prefix": "shift",
+        "body": [
+            "$1.shift();"
+        ],
+        "description": "Shift an item from the start of an array"
+    },
+    "Array Unshift": {
+        "prefix": "unshift",
+        "body": [
+            "$1.unshift($2);"
+        ],
+        "description": "Unshift an item to the start of an array"
+    },
+    "Array Slice": {
+        "prefix": "slice",
+        "body": [
+            "$1.slice($2, $3);"
+        ],
+        "description": "Slice an array"
+    },
+    "Array Splice": {
+        "prefix": "splice",
+        "body": [
+            "$1.splice($2, $3, $4);"
+        ],
+        "description": "Splice an array"
+    },
+    "Array Sort": {
+        "prefix": "sort",
+        "body": [
+            "$1.sort(($2, $3) => $2.$4 - $3.$4);"
+        ],
+        "description": "Sort an array"
+    },
+    "Array Reverse": {
+        "prefix": "reverse",
+        "body": [
+            "$1.reverse();"
+        ],
+        "description": "Reverse an array"
+    },
+    "Object Keys": {
+        "prefix": "keys",
+        "body": [
+            "Object.keys($1);"
+        ],
+        "description": "Get keys of an object"
+    },
+    "Object Values": {
+        "prefix": "values",
+        "body": [
+            "Object.values($1);"
+        ],
+        "description": "Get values of an object"
+    },
+    "Object Entries": {
+        "prefix": "entries",
+        "body": [
+            "Object.entries($1);"
+        ],
+        "description": "Get entries of an object"
+    },
+    "Object Assign": {
+        "prefix": "assign",
+        "body": [
+            "Object.assign($1, $2);"
+        ],
+        "description": "Assign properties from one object to another"
+    },
+    "Object Spread": {
+        "prefix": "spread",
+        "body": [
+            "{ ...$1, $2: $3 }"
+        ],
+        "description": "Spread operator to copy properties from one object to another"
+    },
+    "Object Destructuring": {
+        "prefix": "destruct",
+        "body": [
+            "const { $1, $2 } = $3;"
+        ],
+        "description": "Destructure properties from an object"
+    },
+    "Object Literal": {
+        "prefix": "obj",
+        "body": [
+            "{",
+            "\t$1: $2,",
+            "\t$3: $4",
+            "}"
+        ],
+        "description": "Create an object literal"
+    },
+    "Async Function": {
+        "prefix": "asyncfn",
+        "body": [
+            "async function $1($2) {",
+            "  try {",
+            "    await $0",
+            "  } catch (error) {",
+            "    console.error(error);",
+            "  }",
+            "}"
+        ],
+        "description": "Define an async function"
+    },
+    "Promise": {
+        "prefix": "promise",
+        "body": [
+            "const $1 = new Promise((resolve, reject) => {",
+            "  $0",
+            "}).then((result) => console.log(result))",
+            ".catch((error) => console.error(error));"
+        ],
+        "description": "Create a new Promise"
+    },
+    "useState Hook": {
+        "prefix": "usestate",
+        "body": [
+            "const [$1, set$1] = useState($2);"
+        ],
+        "description": "React useState Hook"
+    },
+    "useEffect Hook": {
+        "prefix": "useeffect",
+        "body": [
+            "useEffect(() => {",
+            "\t$0",
+            "}, [$1]);"
+        ],
+        "description": "React useEffect Hook"
+    },
+    "useMemo Hook": {
+        "prefix": "usememo",
+        "body": [
+            "const $1 = useMemo(() => {",
+            "\treturn $2;",
+            "}, [$3]);"
+        ],
+        "description": "Memoize a computed value"
+    },
+    "useRef Hook": {
+        "prefix": "useref",
+        "body": [
+            "const $1 = useRef($2);"
+        ],
+        "description": "Create a ref object"
+    },
+    "useCallback Hook": {
+        "prefix": "usecallback",
+        "body": [
+            "const $1 = useCallback(($2) => {",
+            "\t$0",
+            "}, [$3]);"
+        ],
+        "description": "Memoize a callback function"
+    },
+    "useContext Hook": {
+        "prefix": "usecontext",
+        "body": [
+            "const $1 = useContext($2);"
+        ],
+        "description": "Use React context"
+    },
+    "useReducer Hook": {
+        "prefix": "usereducer",
+        "body": [
+            "const [$1, $2] = useReducer(($3, $4) => {",
+            "\t$0",
+            "}, $5);"
+        ],
+        "description": "Use reducer for state management"
+    },
+    "React Function Component with Interface": {
+        "prefix": "fnc",
+        "body": [
+            "import React from 'react';",
+            "",
+            "interface ${1:Props} {",
+            "  ${2:exampleProp}?: ${3:string};",
+            "}",
+            "",
+            "function ${4:${TM_FILENAME_BASE}}({ $2 }: $1): JSX.Element {",
+            "  return (",
+            "    <div>",
+            "      ${5:/* Your component code here */}",
+            "    </div>",
+            "  );",
+            "}",
+            "",
+            "export default $4;"
+        ],
+        "description": "Create a React function-based component with TypeScript interface"
+    },
+    "React Function Component with Interface and React Query": {
+        "prefix": "fnc-query",
+        "body": [
+            "import React from 'react';",
+            "import { useQuery } from '@tanstack/react-query';",
+            "",
+            "interface ${1:Props} {",
+            "  ${2:exampleProp}?: ${3:string};",
+            "}",
+            "",
+            "function ${4:${TM_FILENAME_BASE}}({ $2 }: $1): JSX.Element {",
+            "  const { data, error, isLoading } = useQuery({",
+            "    queryKey: ['${5:yourQueryKey}'],",
+            "    queryFn: async () => {",
+            "      const res = await fetch('${6:/api/endpoint}');",
+            "      if (!res.ok) throw new Error('Network response was not ok');",
+            "      return res.json();",
+            "    },",
+            "  });",
+            "",
+            "  if (isLoading) return <div>Loading...</div>;",
+            "  if (error) return <div>Error: {(error as Error).message}</div>;",
+            "",
+            "  return (",
+            "    <div>",
+            "      {/* Render fetched data here */}",
+            "      <pre>{JSON.stringify(data, null, 2)}</pre>",
+            "    </div>",
+            "  );",
+            "}",
+            "",
+            "export default $4;"
+        ],
+        "description": "Componente React function-based with interface and data fetch with React Query"
+    },
+    "React Function Component with Interface and useMutation": {
+        "prefix": "fnc-mutation",
+        "body": [
+            "import React from 'react';",
+            "import { useMutation } from '@tanstack/react-query';",
+            "",
+            "interface ${1:Props} {",
+            "  ${2:exampleProp}?: ${3:string};",
+            "}",
+            "",
+            "interface ${4:Payload} {",
+            "  ${5:key}: ${6:string};",
+            "}",
+            "",
+            "function ${7:${TM_FILENAME_BASE}}({ $2 }: $1): JSX.Element {",
+            "  const mutation = useMutation({",
+            "    mutationFn: async (newData: $4) => {",
+            "      const res = await fetch('${8:/api/endpoint}', {",
+            "        method: 'POST',",
+            "        headers: { 'Content-Type': 'application/json' },",
+            "        body: JSON.stringify(newData),",
+            "      });",
+            "      if (!res.ok) throw new Error('Failed to submit');",
+            "      return res.json();",
+            "    },",
+            "    onSuccess: (data) => {",
+            "      console.log('Success:', data);",
+            "    },",
+            "    onError: (error) => {",
+            "      console.error('Error:', error);",
+            "    },",
+            "  });",
+            "",
+            "  const handleSubmit = () => {",
+            "    mutation.mutate({ ${5:key}: '${9:value}' });",
+            "  };",
+            "",
+            "  return (",
+            "    <div>",
+            "      <button onClick={handleSubmit} disabled={mutation.isPending}>",
+            "        {mutation.isPending ? 'Sending...' : 'Submit'}",
+            "      </button>",
+            "      {mutation.isError && <div>Error: {(mutation.error as Error).message}</div>}",
+            "      {mutation.isSuccess && <div>Success!</div>}",
+            "    </div>",
+            "  );",
+            "}",
+            "",
+            "export default $7;"
+        ],
+        "description": "Componente React function-based with interface and useMutation React Query"
+    },
+    "React Functional Component with Interface": {
+        "prefix": "fc",
+        "body": [
+            "import React, { FC } from 'react';",
+            "",
+            "interface ${1:ComponentName}Props {",
+            "  $2",
+            "}",
+            "",
+            "const ${1:ComponentName}: FC<${1:ComponentName}Props> = ({ $3 }) => {",
+            "  return (",
+            "    <div>",
+            "      $0",
+            "    </div>",
+            "  );",
+            "};",
+            "",
+            "export default ${1:ComponentName};"
+        ],
+        "description": "React Functional Component with Props Interface (TypeScript)"
+    },
+    "React Functional Component with Interface and React Query": {
+        "prefix": "fc-query",
+        "body": [
+            "import React, { FC } from 'react';",
+            "import { useQuery } from '@tanstack/react-query';",
+            "",
+            "interface ${1:ComponentName}Props {",
+            "  $2",
+            "}",
+            "",
+            "const ${1:ComponentName}: FC<${1:ComponentName}Props> = ({ $3 }) => {",
+            "  const { data, error, isLoading } = useQuery({",
+            "    queryKey: ['${5:yourQueryKey}'],",
+            "    queryFn: async () => {",
+            "      const res = await fetch('${6:/api/endpoint}');",
+            "      if (!res.ok) throw new Error('Network response was not ok');",
+            "      return res.json();",
+            "    },",
+            "  });",
+            "",
+            "  if (isLoading) return <div>Loading...</div>;",
+            "  if (error) return <div>Error: {(error as Error).message}</div>;",
+            "",
+            "  return (",
+            "    <div>",
+            "      {/* Render fetched data here */}",
+            "      <pre>{JSON.stringify(data, null, 2)}</pre>",
+            "    </div>",
+            "  );",
+            "};",
+            "",
+            "export default ${1:ComponentName};"
+        ],
+        "description": "React Functional Component with Props Interface (TypeScript)"
+    },
+    "React Functional Component with Interface and useMutation": {
+        "prefix": "fc-mutation",
+        "body": [
+            "import React, { FC } from 'react';",
+            "import { useMutation } from '@tanstack/react-query';",
+            "",
+            "interface ${1:ComponentName}Props {",
+            "  $2",
+            "}",
+            "",
+            "const ${1:ComponentName}: FC<${1:ComponentName}Props> = ({ $3 }) => {",
+            "  const mutation = useMutation({",
+            "    mutationFn: async (newData: $4) => {",
+            "      const res = await fetch('${8:/api/endpoint}', {",
+            "        method: 'POST',",
+            "        headers: { 'Content-Type': 'application/json' },",
+            "        body: JSON.stringify(newData),",
+            "      });",
+            "      if (!res.ok) throw new Error('Failed to submit');",
+            "      return res.json();",
+            "    },",
+            "    onSuccess: (data) => {",
+            "      console.log('Success:', data);",
+            "    },",
+            "    onError: (error) => {",
+            "      console.error('Error:', error);",
+            "    },",
+            "  });",
+            "",
+            "  const handleSubmit = () => {",
+            "    mutation.mutate({ ${5:key}: '${9:value}' });",
+            "  };",
+            "",
+            "  return (",
+            "    <div>",
+            "      <button onClick={handleSubmit} disabled={mutation.isPending}>",
+            "        {mutation.isPending ? 'Sending...' : 'Submit'}",
+            "      </button>",
+            "      {mutation.isError && <div>Error: {(mutation.error as Error).message}</div>}",
+            "      {mutation.isSuccess && <div>Success!</div>}",
+            "    </div>",
+            "  );",
+            "};",
+            "",
+            "export default ${1:ComponentName};"
+        ],
+        "description": "React Functional Component with Props Interface (TypeScript)"
+    },
+    "Zustand Store with TypeScript": {
+        "prefix": "zustandStoreTS",
+        "body": [
+            "import { create } from 'zustand';",
+            "",
+            "interface $1State {",
+            "  $2: $3;",
+            "  set$2: (value: $3) => void;",
+            "}",
+            "",
+            "const use$1Store = create<$1State>((set) => ({",
+            "  $2: $4,",
+            "  set$2: (value) => set({ $2: value })",
+            "}));",
+            "",
+            "export default use$1Store;"
+        ],
+        "description": "Snippet per creare uno store Zustand con TypeScript"
+    },
+    "Zustand Persistent Store": {
+        "prefix": "zustandPersistStore",
+        "body": [
+            "import { persist, createJSONStorage } from 'zustand/middleware';",
+            "import { create } from 'zustand';",
+            "",
+            "interface $1State {",
+            "  $2: $3;",
+            "  set$2: (value: $3) => void;",
+            "}",
+            "",
+            "const use$1Store = create<$1State>()(",
+            "  persist(",
+            "    (set) => ({",
+            "      $2: $4,",
+            "      set$2: (value) => set({ $2: value })",
+            "    }),",
+            "    {",
+            "      name: '$1-store',",
+            "      storage: createJSONStorage(() => localStorage)",
+            "    }",
+            "  )",
+            ");",
+            "",
+            "export default use$1Store;"
+        ],
+        "description": "Snippet generico per creare uno store Zustand persistente con TypeScript"
+    },
+    "React Component Test": {
+    "prefix": "unittest",
+    "body": [
+      "import { render, screen } from '@testing-library/react';",
+      "import { describe, it, expect } from 'vitest';",
+      "import $1 from './$1';",
+      "",
+      "describe('$1 Component', () => {",
+      "  it('renders correctly', () => {",
+      "    render(<$1 />);",
+      "    expect(screen.getByText('$2')).toBeInTheDocument();",
+      "  });",
+      "});"
+    ],
+    "description": "Snippet per testare componenti React con React Testing Library e Vitest"
+  }
+}
